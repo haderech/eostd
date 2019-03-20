@@ -1,0 +1,6 @@
+[submodule "externals/fast-hash"]
+	path = externals/fast-hash
+	url = https://github.com/ZilongTan/fast-hash
+[submodule "libraries/fasthash/fast-hash"]
+	path = libraries/fasthash/fast-hash
+	url = https://github.com/conr2d/fast-hash
