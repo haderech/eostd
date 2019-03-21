@@ -1,3 +1,6 @@
 [submodule "libraries/fasthash/fast-hash"]
 	path = libraries/fasthash/fast-hash
 	url = https://github.com/conr2d/fast-hash
+[submodule "libraries/xxhash/xxHash"]
+	path = libraries/xxhash/xxHash
+	url = https://github.com/conr2d/xxHash

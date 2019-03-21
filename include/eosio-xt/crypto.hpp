@@ -16,7 +16,7 @@ namespace eosio {
     * @param seed - Hash seed
     * @return uint32_t - Computed value
     */
-   uint32_t fasthash32(const char* data, uint32_t length, uint32_t seed);
+   uint32_t fasthash32(const char* data, uint32_t length, uint32_t seed = 0);
 
    /**
     * Hashes `data` using fasthash64.
@@ -27,5 +27,16 @@ namespace eosio {
     * @param seed - Hash seed
     * @return uint64_t - Computed value
     */
-   uint64_t fasthash64(const char* data, uint32_t length, uint64_t seed);
+   uint64_t fasthash64(const char* data, uint32_t length, uint64_t seed = 0);
+
+   /**
+    * Hashes `data` using xxHash v3.
+    * @brief Hashes `data` using xxHash v3.
+    *
+    * @param data - Data you want to hash
+    * @param length - Data length
+    * @param seed - Hash seed
+    * @return uint64_t - Computed value
+    */
+   uint64_t xxh3_64(const char* data, uint32_t length, uint64_t seed = 0);
 }
