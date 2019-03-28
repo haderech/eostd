@@ -1,6 +1,6 @@
 #pragma once
 
-#include <eosiolib/multi_index.hpp>
+#include <eosio/multi_index.hpp>
 
 namespace eosio {
    template <typename T, eosio::name::raw IndexName = name(), typename Extractor = uint64_t>
