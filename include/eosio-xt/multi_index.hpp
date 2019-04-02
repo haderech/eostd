@@ -10,9 +10,9 @@ namespace eosio {
       typename T::const_iterator _this;
 
    public:
-      multi_index_wrapper(name receiver, name code,
+      multi_index_wrapper(name code, name scope,
                        Extractor key = _multi_index_detail::secondary_key_traits<Extractor>::true_lowest())
-      : _tbl(receiver, code.value)
+      : _tbl(code, scope.value)
       , _this(_tbl.end())
       {
          auto _idx = _tbl.template get_index<IndexName>();
@@ -74,8 +74,8 @@ namespace eosio {
       typename T::const_iterator _this;
 
    public:
-      multi_index_wrapper(name receiver, name code, uint64_t key = std::numeric_limits<uint64_t>::lowest())
-      : _tbl(receiver, code.value)
+      multi_index_wrapper(name code, name scope, uint64_t key = std::numeric_limits<uint64_t>::lowest())
+      : _tbl(code, scope.value)
       , _this(_tbl.find(key))
       {}
 
