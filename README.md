@@ -1,3 +1,3 @@
-# eosio-xt
+# EOSLib
 
-EOSIO eXTension is a collection of open source libraries for EOSIO smart contract.
+EOSLib is a collection of open source libraries for EOSIO smart contract.

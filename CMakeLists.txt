@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(eosio-xt)
+project(eoslib)
 
-add_library(eosio-xt STATIC
+add_library(eoslib STATIC
    src/crypto.cpp
 )
 
-target_include_directories(eosio-xt PUBLIC include)
+target_include_directories(eoslib PUBLIC include)
 
-add_subdirectory(libraries)
+add_subdirectory(lib)

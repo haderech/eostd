@@ -1,4 +1,4 @@
-#include <eosio-xt/crypto.hpp>
+#include <eoslib/crypto.hpp>
 #include "fast-hash/fasthash.h"
 #include "xxHash/xxh3.h"
 
