@@ -15,6 +15,7 @@ namespace eosio {
     * @param seed - Hash seed
     * @return uint32_t - Computed value
     */
+   [[deprecated("use xxh32")]]
    uint32_t fasthash32(const char* data, uint32_t length, uint32_t seed = 0);
 
    /**
@@ -26,6 +27,7 @@ namespace eosio {
     * @param seed - Hash seed
     * @return uint64_t - Computed value
     */
+   [[deprecated("use xxh64")]]
    uint64_t fasthash64(const char* data, uint32_t length, uint64_t seed = 0);
 
    /**
