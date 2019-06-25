@@ -1,4 +1,4 @@
 #pragma once
 
 #include <eoslib/crypto/hash.hpp>
-#include <eoslib/crypto/drbh.hpp>
+#include <eoslib/crypto/drbg.hpp>

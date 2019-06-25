@@ -1,16 +1,17 @@
 #pragma once
 
-#include "picosha2.h"
+#include <eoslib/types.hpp>
+#include <eosio/check.hpp>
+#include <cstring>
 
-using std::vector;
-using byte = int8_t;
-using bytes = vector<byte>;
-using HASH = picosha2::hash256_one_by_one;
+#include "PicoSHA2/picosha2.h"
 
 namespace eosio {
 
 class hash_drbg {
 public:
+   using HASH = picosha2::hash256_one_by_one;
+
    static constexpr unsigned int security_strength = 128 / 8;
    static constexpr unsigned int seed_length = 440 / 8;
    static constexpr unsigned int min_entropy_length = 128 / 8;
