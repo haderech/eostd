@@ -2,17 +2,8 @@
 
 #include <eosio/symbol.hpp>
 
-namespace eosio {
-   /**
-    * @addtogroup symbol
-    * @{
-    */
+namespace sio4 {
 
-   /**
-    * Extended symbol code which stores symbol code and contract
-    *
-    * @ingroup symbol
-    */
    struct extended_symbol_code {
 
       constexpr extended_symbol_code() = default;
@@ -68,7 +59,4 @@ namespace eosio {
       EOSLIB_SERIALIZE(extended_symbol_code, (code)(contract))
    };
 
-   /**
-    * @}
-    */
 }

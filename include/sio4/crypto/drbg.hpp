@@ -1,12 +1,14 @@
 #pragma once
 
-#include <eoslib/types.hpp>
+#include <sio4/types.hpp>
 #include <eosio/check.hpp>
 #include <cstring>
 
 #include "PicoSHA2/picosha2.h"
 
-namespace eosio {
+namespace sio4 {
+
+using namespace eosio;
 
 class hash_drbg {
 public:

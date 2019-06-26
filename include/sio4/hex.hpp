@@ -3,7 +3,7 @@
 #include <eosio/check.hpp>
 #include <vector>
 
-namespace eosio {
+namespace sio4 {
 
 uint8_t from_hex(char c) {
    if (c >= '0' && c <= '9')

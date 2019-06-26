@@ -4,7 +4,7 @@
 #pragma once
 #include <cstdint>
 
-namespace eosio {
+namespace sio4 {
    /**
     * Hashes `data` using xxHash32
     * @brief Hashes `data` using xxHash32

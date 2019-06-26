@@ -2,13 +2,13 @@
 
 #include <eosio/print.hpp>
 
-namespace eosio {
+namespace sio4 {
 
 template<typename... Args>
 inline void dlog(Args&&... args) {
 #ifndef NDEBUG
-   print(std::forward<Args>(args)...);
+   eosio::print(std::forward<Args>(args)...);
 #endif
 }
 
-} /// namespace eosio
+} /// namespace sio4
