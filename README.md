@@ -29,7 +29,7 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/../libsio4 ${CMAKE_BINARY_DIR}/../libsio4)
 target_link_libraries(YOUR_CONTRACT_TARGET sio4)
 
 # option 2: make all targets link library
-link_libraires(sio4)
+link_libraries(sio4)
 ```
 
 ## Nota bene
