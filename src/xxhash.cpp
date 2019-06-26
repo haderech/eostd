@@ -1,4 +1,5 @@
-#include <sio4/crypto.hpp>
+#include <sio4/crypto/xxhash.hpp>
+
 #include "xxHash/xxhash.h"
 
 uint32_t sio4::xxh32(const char* data, uint32_t length, uint32_t seed) {

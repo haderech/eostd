@@ -7,7 +7,9 @@ find_package(eosio.cdt)
 include(EosioWasmToolchain)
 
 add_library(sio4 STATIC
-   src/crypto.cpp
+   src/xxhash.cpp
+   src/sha256.cpp
+   src/drbg.cpp
 )
 
 target_include_directories(sio4 PUBLIC include)
