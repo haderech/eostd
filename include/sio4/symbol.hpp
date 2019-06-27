@@ -1,8 +1,12 @@
 #pragma once
 
 #include <eosio/symbol.hpp>
+#include <eosio/print.hpp>
 
 namespace sio4 {
+
+   using eosio::symbol_code;
+   using eosio::name;
 
    struct extended_symbol_code {
 
@@ -38,7 +42,7 @@ namespace sio4 {
       inline void print()const {
          auto str = to_string();
          if (str.size())
-            printl(str.data(), str.size());
+            eosio::printl(str.data(), str.size());
       }
 
       friend constexpr bool operator == ( const extended_symbol_code& a, const extended_symbol_code& b ) {
