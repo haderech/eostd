@@ -11,7 +11,7 @@ namespace sio4 {
 
    public:
       multi_index_wrapper(name code, name scope,
-                       Extractor key = _multi_index_detail::secondary_key_traits<Extractor>::true_lowest())
+                       Extractor key = eosio::_multi_index_detail::secondary_key_traits<Extractor>::true_lowest())
       : _tbl(code, scope.value)
       , _this(_tbl.end())
       {
