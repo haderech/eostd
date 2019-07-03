@@ -4,7 +4,7 @@ Lithium Borosilicate is a collection of open source libraries for EOSIO smart co
 
 ## Prerequisites
 
-This requires [eosio.cdt](https://github.com/EOSIO/eosio.cdt) v1.6.1 or higher. `eosio-ar` is not installed by default, so you need to create symbolic link. 
+This requires [eosio.cdt](https://github.com/EOSIO/eosio.cdt) v1.6.1 or higher. `eosio-ar` is not installed by default, so you need to create symbolic link.
 
 __Ubuntu__
 
@@ -15,7 +15,7 @@ $ sudo ln -s /usr/opt/eosio.cdt/1.6.1/bin/eosio-ar /usr/bin/eosio-ar
 __macOS__
 
 ``` console
-$ sudo ln -s /usr/local/Cellar/eosio.cdt/1.6.1/bin/eosio-ar /usr/local/bin/eosio-ar
+$ sudo ln -s /usr/local/Cellar/eosio.cdt/1.6.1/opt/eosio.cdt/bin/eosio-ar /usr/local/bin/eosio-ar
 ```
 
 ## How to use
