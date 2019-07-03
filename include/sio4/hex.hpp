@@ -12,7 +12,7 @@ uint8_t from_hex(char c) {
       return c - 'a' + 10;
    if (c >= 'A' && c <= 'F')
       return c - 'A' + 10;
-   check(false, "invalid hex character `" + std::string(1, c) + "`");
+   eosio::check(false, "invalid hex character `" + std::string(1, c) + "`");
    return 0;
 }
 
