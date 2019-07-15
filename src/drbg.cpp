@@ -99,6 +99,7 @@ void hash_drbg::hash_generate(const bytes& additional, bytes& output, size_t siz
    }
 
    // Step 3
+   output.resize(0);
    m_temp.assign(m_v.begin(), m_v.end());
    while (size) {
       m_hash.update(m_temp);
