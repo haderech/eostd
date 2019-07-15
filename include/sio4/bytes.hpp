@@ -4,9 +4,7 @@
 
 namespace sio4 {
 
-struct bytes : std::vector<int8_t> {
-   template<typename T>
-   T as() { return eosio::unpack<T>(*this); }
-};
+using byte = int8_t;
+using bytes = std::vector<byte>;
 
 }
