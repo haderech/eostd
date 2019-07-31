@@ -3,6 +3,9 @@
 #include <eosio/multi_index.hpp>
 
 namespace sio4 {
+
+   using namespace eosio;
+
    template <typename T, eosio::name::raw IndexName = name(), typename Extractor = uint64_t>
    class multi_index_wrapper {
    protected:
