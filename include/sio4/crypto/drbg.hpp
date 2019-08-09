@@ -1,8 +1,9 @@
 #pragma once
 
-#include <sio4/crypto/sha256.hpp>
 #include <eosio/check.hpp>
 #include <cstring>
+#include "sha256.hpp"
+#include "../bytes.hpp"
 
 namespace sio4 {
 
@@ -10,9 +11,6 @@ using namespace eosio;
 
 class hash_drbg {
 public:
-   using byte = int8_t;
-   using bytes = std::vector<byte>;
-
    static constexpr unsigned int security_strength = 128 / 8;
    static constexpr unsigned int seed_length = 440 / 8;
    static constexpr unsigned int min_entropy_length = 128 / 8;
