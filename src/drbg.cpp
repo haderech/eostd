@@ -2,10 +2,8 @@
 
 namespace sio4 {
 
-hash_drbg::hash_drbg(const bytes& entropy, const bytes& nonce, const bytes& personalization) {
-   m_c.resize(seed_length);
-   m_v.resize(seed_length);
-
+hash_drbg::hash_drbg(const bytes& entropy, const bytes& nonce, const bytes& personalization)
+: m_c(seed_length), m_v(seed_length), m_reseed(0) {
    std::memset(m_c.data(), 0x00, m_c.size());
    std::memset(m_v.data(), 0x00, m_v.size());
 
@@ -75,8 +73,7 @@ void hash_drbg::hash_generate(const bytes& additional, bytes& output, size_t siz
       m_hash.update(two);
       m_hash.update(m_v);
       m_hash.update(additional);
-
-      m_hash.truncated_final(m_temp, sha256::digest_size);
+      m_hash.final(m_temp);
 
       assert(seed_length >= sha256::digest_size);
       int carry = 0;
@@ -120,7 +117,7 @@ void hash_drbg::hash_generate(const bytes& additional, bytes& output, size_t siz
 
       m_hash.update(three);
       m_hash.update(m_v);
-      m_hash.truncated_final(m_temp, sha256::digest_size);
+      m_hash.final(m_temp);
 
       assert(seed_length >= sha256::digest_size);
       assert(sha256::digest_size >= sizeof(m_reseed));
@@ -131,7 +128,7 @@ void hash_drbg::hash_generate(const bytes& additional, bytes& output, size_t siz
       int i = seed_length - 1;
 
       while (k >= 0) {
-         carry = m_v[i] + m_c[i] + m_temp[j] + (m_reseed & 0xFF << (sizeof(uint64_t)-k-1)) + carry;
+         carry = m_v[i] + m_c[i] + m_temp[j] + ((m_reseed >> (sizeof(uint64_t)-k-1)) & 0xFF) + carry;
          m_v[i] = static_cast<byte>(carry);
          i--;
          j--;
@@ -152,6 +149,8 @@ void hash_drbg::hash_generate(const bytes& additional, bytes& output, size_t siz
          carry >>= 8;
       }
    }
+
+   m_reseed++;
 }
 
 void hash_drbg::hash_update(const bytes& input1, const bytes& input2, const bytes& input3, const bytes& input4, bytes& output, size_t outlen) {
