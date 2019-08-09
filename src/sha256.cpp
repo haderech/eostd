@@ -40,7 +40,7 @@ void sha256::update(const bytes& input) {
 
 void sha256::final(bytes& digest) {
    my->final(reinterpret_cast<uint8_t*>(digest.data()));
-   init();
+   my->init();
 }
 
 void sha256::truncated_final(bytes& digest, size_t size) {
