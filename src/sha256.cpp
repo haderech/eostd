@@ -34,24 +34,22 @@ void sha256::init() {
    my->init();
 }
 
-void sha256::update(const bytes& input) {
-   my->update(reinterpret_cast<const uint8_t*>(input.data()), input.size());
+void sha256::update(const byte* input, size_t length) {
+   my->update(input, length);
 }
 
-void sha256::final(bytes& digest) {
-   my->final(reinterpret_cast<uint8_t*>(digest.data()));
+void sha256::final(byte* digest) {
+   my->final(digest);
    my->init();
 }
 
-void sha256::truncated_final(bytes& digest, size_t size) {
+void sha256::truncated_final(byte* digest, size_t size) {
    eosio::check(size <= digest_size, "Invalid digest size");
 
-   digest.resize(SHA256_DIGEST_LENGTH);
-   final(digest);
+   byte output[SHA256_DIGEST_LENGTH];
+   final(output);
 
-   if (size < digest_size) {
-      digest.resize(size);
-   }
+   std::memcpy(digest, output, size);
 }
 
 }
