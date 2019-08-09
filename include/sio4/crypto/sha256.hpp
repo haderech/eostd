@@ -14,9 +14,9 @@ public:
    sha256();
 
    void init();
-   void update(const bytes& input);
-   void final(bytes& digest);
-   void truncated_final(bytes& digest, size_t size);
+   void update(const byte* input, size_t length);
+   void final(byte* digest);
+   void truncated_final(byte* digest, size_t size);
 
 private:
    std::shared_ptr<sha256_impl> my;
