@@ -2,7 +2,7 @@
 
 #include <eosio/print.hpp>
 
-namespace sio4 {
+namespace eostd {
 
 template<typename... Args>
 inline void dlog(Args&&... args) {
@@ -11,4 +11,4 @@ inline void dlog(Args&&... args) {
 #endif
 }
 
-} /// namespace sio4
+} /// namespace eostd

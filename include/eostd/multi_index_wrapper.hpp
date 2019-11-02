@@ -2,7 +2,7 @@
 
 #include <eosio/multi_index.hpp>
 
-namespace sio4 {
+namespace eostd {
 
    using namespace eosio;
 
