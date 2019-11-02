@@ -3,7 +3,7 @@
 #include <eosio/symbol.hpp>
 #include <eosio/print.hpp>
 
-namespace sio4 {
+namespace eostd {
 
    using eosio::symbol_code;
    using eosio::name;

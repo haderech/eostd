@@ -1,6 +1,6 @@
-#include <sio4/crypto/drbg.hpp>
+#include <eostd/crypto/drbg.hpp>
 
-namespace sio4 {
+namespace eostd {
 
 hash_drbg::hash_drbg(const byte* entropy, size_t entropy_length, const byte* nonce, size_t nonce_length, const byte* personalization, size_t personalization_length)
 : m_c(seed_length), m_v(seed_length), m_reseed(0) {

@@ -3,7 +3,7 @@
 #include <memory>
 #include "../bytes.hpp"
 
-namespace sio4 {
+namespace eostd {
 
 class sha256_impl;
 

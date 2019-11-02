@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <vector>
 
-namespace sio4 {
+namespace eostd {
 
 using byte = uint8_t;
 using bytes = std::vector<byte>;

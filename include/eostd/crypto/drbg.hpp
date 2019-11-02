@@ -5,7 +5,7 @@
 #include "sha256.hpp"
 #include "../bytes.hpp"
 
-namespace sio4 {
+namespace eostd {
 
 using namespace eosio;
 

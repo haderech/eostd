@@ -1,8 +1,8 @@
-#include <sio4/crypto/sha256.hpp>
+#include <eostd/crypto/sha256.hpp>
 #include <eosio/check.hpp>
 #include "sha256/sha256.h"
 
-namespace sio4 {
+namespace eostd {
 
 class sha256_impl {
 public:
